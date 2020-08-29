@@ -31,7 +31,7 @@ def copy_config_file(config_file, out_path, new_fields):
         else:
             new_line = '"{}":{},\n'.format(key, value)
         config_lines.insert(1, new_line)
-    config_out_file = open(out_path, "w")
+    config_out_file = open(out_path, "w", encoding="utf-8")
     config_out_file.writelines(config_lines)
     config_out_file.close()
 
